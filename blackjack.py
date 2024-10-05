@@ -8,7 +8,6 @@ class Card:
     def __repr__(self):
         return f"{self.value} of {self.suit}"
 
-
 class Deck:
     def __init__(self):
         self.cards = []
@@ -24,7 +23,6 @@ class Deck:
 
     def deal(self):
         return self.cards.pop()
-
 
 class Hand:
     def __init__(self):
@@ -45,16 +43,13 @@ class Hand:
                     value += 14
                 else:
                     value += 10
-
         while value > 21 and aces:
             value -= 10
             aces -= 1
-
         return value
 
     def __repr__(self):
         return f"Hand value: {self.calculate_value()} with cards: {self.cards}"
-
 
 # Create a deck and shuffle it
 deck = Deck()
@@ -99,7 +94,6 @@ print("The dealers face-down card is:")
 print(dealer_hand.cards[1])
 print("The dealers face-up card is:")
 print(dealer_hand.cards[0])
-print("The dealer has finished playing cards.")
 
 # Determine winner
 if dealer_hand.calculate_value() > 21:
