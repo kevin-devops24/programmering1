@@ -71,7 +71,7 @@ print("You have been dealt two cards:")
 print(player_hand)
 print("The dealer has one card face up and one card face down.")
 
-# Player's turn
+# Players turn
 while True:
     action = input("Do you want to 'hit' or 'stand'? ")
     if action.lower() == "hit":
@@ -86,7 +86,7 @@ while True:
     else:
         print("Invalid input. Please enter 'hit' or 'stand'.")
 
-# Dealer's turn
+# Dealers turn
 while dealer_hand.calculate_value() < 17:
     dealer_hand.add_card(deck.deal())
 
